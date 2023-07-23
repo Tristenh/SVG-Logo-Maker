@@ -2,6 +2,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const { triangle, square, circle, shape } = require("./lib/shapes");
+
+// prompts
 inquirer
   .prompt([
     {
@@ -44,6 +46,8 @@ inquirer
       },
     },
   ])
+
+  // data collection
   .then((data) => {
     if (data.text) {
       text = data.text;
@@ -64,6 +68,7 @@ inquirer
     }
     const filename = "logo.svg";
     const dataInfo = shape(text, textColor, selectedShape, shapeColor);
+
     //  write SVG file
     fs.writeFile(filename, dataInfo, (err) =>
       err ? console.log(err) : console.log(`Generated logo.svg`)
