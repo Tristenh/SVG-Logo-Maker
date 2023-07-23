@@ -1,5 +1,5 @@
 <svg height="300" width="200" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="95" style="fill:green" stroke="black" stroke-width="3"/>
-<text x="100" y="100" font-size="60px" fill="white" text-anchor="middle" dominant-baseline="middle">TJH</text>
+<circle cx="100" cy="100" r="95" style="fill:#808080" stroke="black" stroke-width="3"/>
+<text x="100" y="100" font-size="60px" fill="#90ee90" text-anchor="middle" dominant-baseline="middle">TJH</text>
 Sorry, your browser does not support inline SVG.
 </svg>

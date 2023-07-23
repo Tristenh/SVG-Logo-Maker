@@ -18,10 +18,10 @@ inquirer
     {
       type: "input",
       name: "textColor",
-      message: "please input a text color",
+      message: "please input a text color, example #90ee90 or lightgreen",
       validate: function (input) {
         if (!input) {
-          return "Please enter text color";
+          return "Please enter text color, example #90ee90 or lightgreen";
         }
         return true;
       },
@@ -35,10 +35,10 @@ inquirer
     {
       type: "input",
       name: "shapeColor",
-      message: "please input a shape color",
+      message: "please input a shape color, example #808080 or gray",
       validate: function (input) {
         if (!input) {
-          return "Please enter shape color";
+          return "Please enter shape color, example #808080 or gray";
         }
         return true;
       },
