@@ -1,0 +1,5 @@
+<svg height="300" width="200" xmlns="http://www.w3.org/2000/svg">
+<polygon points="100,0 200,200 0,200" style="fill:white" stroke="black" stroke-width="3"/>
+<text x="100" y="100" font-size="40px" fill="black" text-anchor="middle" dominant-baseline="middle">TJH</text>
+Sorry, your browser does not support inline SVG.
+</svg>
