@@ -1,6 +1,5 @@
 //  packages needed for this application
 const inquirer = require("inquirer");
-const jest = require("jest");
 const fs = require("fs");
 const { triangle, square, circle, shape } = require("./lib/shapes");
 inquirer
@@ -9,6 +8,12 @@ inquirer
       type: "input",
       name: "text",
       message: "please enter 3 characters",
+      validate: function (input) {
+        if (!input || input.length > 3) {
+          return "Please enter at least 3 characters";
+        }
+        return true;
+      },
     },
     {
       type: "input",
