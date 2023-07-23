@@ -45,10 +45,10 @@ inquirer
     if (data.shapeColor) {
       shapeColor = data.shapeColor;
     }
-    const filename = "shape.svg";
+    const filename = "logo.svg";
     const dataInfo = shape(text, textColor, selectedShape, shapeColor);
     //  write SVG file
     fs.writeFile(filename, dataInfo, (err) =>
-      err ? console.log(err) : console.log(`success!`)
+      err ? console.log(err) : console.log(`Generated logo.svg`)
     );
   });
