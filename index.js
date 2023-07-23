@@ -2,7 +2,7 @@
 const inquirer = require("inquirer");
 const jest = require("jest");
 const fs = require("fs");
-
+const { triangle, square, circle, shape } = require("./lib/shapes")
 inquirer
   .prompt([
     {
