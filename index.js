@@ -13,13 +13,18 @@ inquirer
     {
       type: "input",
       name: "textColor",
-      message: "please input a color",
+      message: "please input a text color",
     },
     {
       type: "list",
       name: "title",
       message: "please select circle, square or triangle",
       choices: ["circle", "square", "triangle"],
+    },
+    {
+      type: "input",
+      name: "shapeColor",
+      message: "please input a shape color",
     },
   ])
   .then((data) => {
@@ -37,8 +42,11 @@ inquirer
     } else if (data.title.includes("triangle")) {
       selectedShape = triangle;
     }
+    if (data.shapeColor) {
+      shapeColor = data.shapeColor;
+    }
     const filename = "shape.svg";
-    const dataInfo = shape(text, textColor, selectedShape);
+    const dataInfo = shape(text, textColor, selectedShape, shapeColor);
     //  write SVG file
     fs.writeFile(filename, dataInfo, (err) =>
       err ? console.log(err) : console.log(`success!`)
