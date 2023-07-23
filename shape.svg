@@ -1,4 +1,5 @@
 <svg height="300" width="200" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="95" stroke="black" stroke-width="3" fill="red" />
+<polygon points="100,10 200,200 0,200" style="fill:lime;stroke:purple;stroke-width:1" />
+<text x="100" y="100" fill="blue" text-anchor="middle" dominant-baseline="middle">TJH</text>
 Sorry, your browser does not support inline SVG.
 </svg>

@@ -6,6 +6,16 @@ const { triangle, square, circle, shape } = require("./lib/shapes");
 inquirer
   .prompt([
     {
+      type: "input",
+      name: "text",
+      message: "please enter 3 characters",
+    },
+    {
+      type: "input",
+      name: "textColor",
+      message: "please input a color",
+    },
+    {
       type: "list",
       name: "title",
       message: "please select circle, square or triangle",
@@ -13,6 +23,12 @@ inquirer
     },
   ])
   .then((data) => {
+    if (data.text) {
+      text = data.text;
+    }
+    if (data.textColor) {
+      textColor = data.textColor;
+    }
     let selectedShape;
     if (data.title.includes("circle")) {
       selectedShape = circle;
@@ -22,7 +38,7 @@ inquirer
       selectedShape = triangle;
     }
     const filename = "shape.svg";
-    const dataInfo = shape(selectedShape);
+    const dataInfo = shape(text, textColor, selectedShape);
     //  write SVG file
     fs.writeFile(filename, dataInfo, (err) =>
       err ? console.log(err) : console.log(`success!`)
