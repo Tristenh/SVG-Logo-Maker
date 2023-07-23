@@ -10,7 +10,7 @@ inquirer
       message: "please enter 3 characters",
       validate: function (input) {
         if (!input || input.length > 3) {
-          return "Please enter at least 3 characters";
+          return "Please enter between 1 & 3 characters";
         }
         return true;
       },
@@ -19,6 +19,12 @@ inquirer
       type: "input",
       name: "textColor",
       message: "please input a text color",
+      validate: function (input) {
+        if (!input) {
+          return "Please enter text color";
+        }
+        return true;
+      },
     },
     {
       type: "list",
@@ -30,6 +36,12 @@ inquirer
       type: "input",
       name: "shapeColor",
       message: "please input a shape color",
+      validate: function (input) {
+        if (!input) {
+          return "Please enter shape color";
+        }
+        return true;
+      },
     },
   ])
   .then((data) => {
