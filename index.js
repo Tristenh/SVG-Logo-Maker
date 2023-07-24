@@ -1,8 +1,10 @@
 //  packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const { triangle, square, circle, shape } = require("./lib/shapes");
-
+const { Triangle, Square, Circle, shape } = require("./lib/shapes");
+const triangle = new Triangle().shapeSelection;
+const circle = new Circle().shapeSelection;
+const square = new Square().shapeSelection;
 // prompts
 inquirer
   .prompt([
